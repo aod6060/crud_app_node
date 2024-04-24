@@ -1,0 +1,12 @@
+<%- include('includes/header')-%>
+
+        <form action="/delete/<%= id %>" method="post">
+            <div class="mb-3">
+                Are you sure you want to delete "<%= rows[0].message %>"?
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Yes" class="btn btn-primary" /> |
+                <input type="button" value="No" onclick="history.back()" class="btn btn-secondary" />
+            </div>
+        </form>
+<%- include('includes/footer')-%>

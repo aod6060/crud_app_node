@@ -1,0 +1,25 @@
+<%- include('includes/header')-%>
+        <div class="mb-3">
+            <a href="/new" class="link-primary">New Message</a>
+        </div>
+        <%
+            for(i = 0; i < rows.length; i++) {
+        %>
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h5 class="card-title">
+                                <%= rows[i].id %>
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <%= rows[i].message %>
+                            </p>
+                            <a href="/edit/<%= rows[i].id %>" class="card-link">Edit</a>
+                            <a href="/delete/<%= rows[i].id %>" class="card-link link-danger">Delete</a>
+                        </div>
+                    </div>
+        <%
+            }
+        %>
+<%- include('includes/footer')-%>
